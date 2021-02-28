@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城注册 </title>
+    <link rel="stylesheet" href="../hisen_iconfont/iconfont.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../css/headNav.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../jquery/jquery.min.js"></script>
+
+    <script src="../js/headNav.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/sign.js"></script>
+</head>
+
+<body>
+    <div id="whole">
+        <!-- 侧边小标 -->
+        <ul class="side">
+        </ul>
+        <div class="login">
+            <div class="login-title">
+                <div class="login-logo">
+                    <a href="../index.html"><img src="../images/login.png" alt=""></a>
+                </div>
+                <div class="login-t">权威官网&nbsp;汇聚精品</div>
+            </div>
+            <div class="login-cont">
+                <div class="loginifi-pis">
+                    <div class="loginifi">
+
+                        <ul class="logini-title">
+                            <li class="login-way1 login-li login-li-hover"><span>账户注册</span></li>
+
+                        </ul>
+                        <!-- 登录内容 -->
+
+                        <div class="error-text">
+
+                        </div>
+                        <form action="post" id="login-form">
+                            <fieldset>
+                                <div class="userbox box">
+                                    <span class="text">账号/邮箱/手机号</span>
+                                    <input class="username box-in" name="username" type="text" value="">
+                                    <span class="Error-text"> <i class="iconfont icon-warn_light"></i>请输入正确手机号</span>
+                                </div>
+                                <!-- 密码验证 -->
+                                <div class="passbox box">
+                                    <span class="text">密码</span>
+                                    <input class="password box-in" name="password" type="password">
+                                    <span class="Error-text Error-text1"><i class="iconfont icon-warn_light"></i>密码不可为空</span>
+                                    <span class="Error-text Error-text2"><i class="iconfont icon-warn_light"></i>请输入6-20位数字大小写字母组合密码</span>
+                                </div>
+
+                                <input class="select-input active" type="button" value="注册">
+                                <a class="qiye" href="javascript:void(0);">已有账号？立即登录</a>
+                            </fieldset>
+                        </form>
+                        <p class="more-tilte">可选择第三方登录方式</p>
+                        <div class="login-more"><i class="iconfont  icon-logo-wechat-fill"></i><i class="iconfont icon-logo-alipay-fill"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="login-footer">青岛海信营销管理有限公司版权所有 &nbsp;网站备案/许可证号鲁ICP备05027830</div>
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

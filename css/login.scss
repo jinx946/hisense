@@ -1,0 +1,254 @@
+.login {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    // 标题
+    .login-title {
+        width: 1188px;
+        height: 50px;
+        line-height: 50px;
+        padding: 15px 0;
+        margin: 0 auto;
+        font-size: 0;
+        text-align: left;
+        background-color: #FFFFFF;
+        .login-logo {
+            display: inline-block;
+            vertical-align: top;
+            width: 152px;
+            height: 50px;
+            a {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .login-t {
+            display: inline-block;
+            margin-left: 15px;
+            width: 200px;
+            font-size: 20px;
+            color: rgb(51, 51, 51);
+        }
+    }
+    // 内容
+    .login-cont {
+        background: url(https://img.shop.hisense.com/2020/12/04/3ca4262f-ed76-4588-a249-01302d849ef2.jpg)no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 680px;
+        margin: 60px 0;
+        position: relative;
+        .loginifi-pis {
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .login-footer {
+        width: 1188px;
+        padding: 36px;
+        height: 18px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #FFFFFF;
+        line-height: 18px;
+        font-size: 14px;
+        color: #646464;
+    }
+}
+
+// 登录弹框
+.loginifi {
+    position: relative;
+    width: 364px;
+    height: 540px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    .login-er {
+        width: 47px;
+        height: 47px;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: url(../images/sign_er.png);
+        background-size: 100% 100%;
+        &:hover {
+            background: url(../images/sign_er_hover.png);
+        }
+    }
+    .logini-title {
+        width: 100%;
+        border-bottom: 1px solid #AAAAAA;
+        font-size: 0;
+        .login-li {
+            cursor: pointer;
+            width: 182px;
+            height: 64px;
+            display: inline-block;
+            color: #AAAAAA;
+            font-size: 18px;
+            line-height: 64px;
+            text-align: center;
+            span {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .login-li-hover {
+            position: relative;
+            color: #00AAA6;
+            &::after {
+                position: absolute;
+                width: 72px;
+                height: 2px;
+                background-color: #00AAA6;
+                bottom: -1px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+            }
+        }
+    }
+    .error-text {
+        padding: 0 48px;
+        text-align: left;
+        height: 40px;
+        line-height: 40px;
+        color: #cc0010;
+        font-size: 14px;
+    }
+    #login-form {
+        padding: 0px 40px 0;
+        width: 284px;
+        height: 330px;
+        fieldset {
+            border: none;
+            .userbox {
+                position: relative;
+            }
+            .passbox {
+                position: relative;
+            }
+            .box {
+                width: 100%;
+                line-height: 80px;
+                height: 80px;
+                .text {
+                    color: #AAAAAA;
+                    transition: all 0.5s;
+                    font-size: 16px;
+                    z-index: 0;
+                    line-height: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 30px;
+                    left: 5px;
+                }
+                .box-in {
+                    width: 100%;
+                    height: 30px;
+                    border: none;
+                    outline: none;
+                    z-index: 999;
+                    position: relative;
+                    color: #262626;
+                    opacity: .5;
+                    text-indent: 1px;
+                    border-bottom: 1px solid #aaaaaa;
+                }
+                .Error-text {
+                    position: absolute;
+                    display: none;
+                    left: 0;
+                    height: 18px;
+                    bottom: 6px;
+                    font-size: 12px;
+                    color: #cc0010;
+                    line-height: 18px;
+                }
+            }
+            // 选择
+            .selectbox {
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                font-size: 0px;
+                /* background: red; */
+                padding: 5px 0 15px;
+                .moretime {
+                    width: 12px;
+                    height: 12px;
+                    display: inline-block;
+                }
+                span {
+                    margin: 0 5px;
+                    height: 18px;
+                    line-height: 18px;
+                    font-size: 12px;
+                    display: inline-block;
+                    color: #262626;
+                }
+                .checkbox1 {
+                    cursor: pointer;
+                    margin: 0 10px 0 52px;
+                }
+                .select2 {
+                    color: #00AAA6;
+                    margin: 0;
+                }
+            }
+            // 登录
+            .select-input {
+                width: 100%;
+                font-size: 20px;
+                height: 40px;
+                background: #bbb;
+                outline: none;
+                line-height: 40px;
+            }
+            .active {
+                cursor: pointer;
+                background: #00AAA6;
+                &:hover {
+                    opacity: .8;
+                }
+            }
+            // 企业
+            .qiye {
+                width: 263px;
+                margin: 20px 0;
+                cursor: pointer;
+                font-size: 20px;
+                height: 38px;
+                background: #FFFFFF;
+                border: 1px solid #bbb;
+                outline: none;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+    }
+    // 第三方
+    .more-tilte {
+        text-align: center;
+        font-size: 12px;
+        color: #bbb;
+        height: 30px;
+        line-height: 30px;
+    }
+    .login-more {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+        i {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    }
+}

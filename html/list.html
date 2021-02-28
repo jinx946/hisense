@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城列表页</title>
+    <link rel="stylesheet" href="../hisen_iconfont/iconfont.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../css/headNav.css">
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/list.js"></script>
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+
+<body>
+    <div id="whole">
+        <!-- 侧边小标 -->
+        <ul class="side">
+        </ul>
+        <!-- 头部 -->
+        <!-- 头部图片 -->
+        <div class="top-img">
+            <a href="#"> <img src="../images/top.jpg" alt=""></a>
+        </div>
+        <!-- 头部导航栏 -->
+        <div class="topNav">
+        </div>
+        <!-- 导航栏 -->
+        <div class="mainnav">
+        </div>
+        <script src="../js/headNav.js"></script>
+        <script>
+            //滚动条滚动事件
+            window.onscroll = function() {
+                // 滚动到一定高度，导航栏置顶
+                if (scrollY < 500) {
+                    $('.side').css({
+                        bottom: 0,
+                        right: 10
+                    });
+
+                } else {
+                    $('.side').css({
+                        bottom: 200,
+                        right: 10,
+                    });
+
+                }
+                if (scrollY < 700) {
+                    $('.goTop').hide();
+                } else {
+                    $('.goTop').show();
+                    $('.goTop').css('display', 'flex')
+                }
+            }
+        </script>
+        <div class="list-cont">
+            <!-- 列表页板心 -->
+            <div class="list-limi">
+                <!-- 列表页左边 -->
+                <div class="list-sort">
+                </div>
+                <!-- 商品 -->
+                <div class="list-goods-limi">
+                    <!-- 商品头部配送 -->
+                    <div class="list-goods-top">
+                        <!-- 商品配送 -->
+                        <div class="list-area">
+                            <!-- 配送 -->
+                            <div class="cart-song">
+                                <div class="cart-cont-title">
+                                    <div class="title-le">配送至</div>
+                                    <div class="carry">
+                                        <div class="carry-detail">
+                                            <span class="carry1">广州市</span><span class="carry2">天河区</span><span class="carry3">元岗路</span> <i class="iconfont icon-icon-test6"></i>
+                                        </div>
+                                        <div class="carry-arr">
+                                            <ul class="carry-arr-title">
+                                                <li class="fenji1"><a href="#">湖北加快两地分居拉克的 </a><i class="iconfont icon-icon-test6"></i></li>
+                                                <li class="fenji2 carry-active"><a href="#"> 请选择</a> <i class="iconfont icon-icon-test6"></i></li>
+                                                <li class="fenji3"><a href="#">空白 </a><i class="iconfont icon-icon-test6"></i></li>
+                                            </ul>
+                                            <ul class="little">
+                                                <li class="little-so"><a href="#">北京 </a></li>
+                                                <li class="little-so"><a href="#">天津 </a></li>
+                                                <li class="little-so"><a href="#">广东 </a></li>
+                                                <li class="little-so"><a href="#">上海 </a></li>
+                                                <li class="little-so"><a href="#">湖北加快两地分居拉克的 </a></li>
+                                                <li class="little-so"><a href="#">和别 </a></li>
+                                                <li class="little-so"><a href="#">湖南 </a></li>
+                                                <li class="little-so"><a href="#">北京 </a></li>
+                                                <li class="little-so"><a href="#">天津 </a></li>
+                                                <li class="little-so"><a href="#">广东 </a></li>
+                                                <li class="little-so"><a href="#">上海 </a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 有无货存 -->
+                        <div class="goodhas"><input type="checkbox"><label for="">有货</label></div>
+                        <!-- 右边盒子 -->
+                        <ul class="goods-for">
+                            <li><a href="#">评价数</a></li>
+                            <li><a href="#">销量</a></li>
+                            <li><a href="#">价格</a></li>
+                            <li><a href="#"><i class="iconfont icon-search_list_light"></i> </a></li>
+                            <li><a href="#"><i class="iconfont icon-sortlight"></i> </a></li>
+                        </ul>
+                    </div>
+                    <!-- 商品 -->
+                    <div class="list-goods">
+                        <ul class="list-goods-in">
+                            <!-- 单个商品 -->
+                        </ul>
+                    </div>
+                    <!-- 分页 -->
+                    <div class="goods-paging">
+                        <!-- 盒子右边 -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+        </div>
+        <!-- 尾巴 -->
+        <div class="tail">
+        </div>
+        <!-- 最底部 -->
+    </div>
+
+
+</body>
+
+</html>

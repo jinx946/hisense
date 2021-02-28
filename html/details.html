@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="../hisen_iconfont/iconfont.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../css/headNav.css">
+    <link rel="stylesheet" href="../swiper-master/package/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <script src="../swiper-master/package/swiper-bundle.min.js"></script>
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/detalis.js"></script>
+</head>
+
+<body>
+    <div id="whole">
+        <!-- 侧边小标 -->
+        <ul class="side">
+        </ul>
+        <!-- 头部 -->
+        <!-- 头部图片 -->
+        <div class="top-img">
+            <a href=""> <img src="../images/top.jpg" alt=""></a>
+
+        </div>
+        <!-- 头部导航栏 -->
+        <div class="topNav">
+
+        </div>
+        <!-- 导航栏 -->
+        <div class="mainnav">
+        </div>
+        <script src="../js/headNav.js"></script>
+        <script>
+            //滚动条滚动事件
+            window.onscroll = function() {
+                // 滚动到一定高度，导航栏置顶
+                if (scrollY < 500) {
+                    $('.side').css({
+                        bottom: 0,
+                        right: 10
+                    });
+
+                } else {
+                    $('.side').css({
+                        bottom: 200,
+                        right: 10,
+                    });
+
+                }
+                if (scrollY < 700) {
+                    $('.goTop').hide();
+                } else {
+                    $('.goTop').show();
+                    $('.goTop').css('display', 'flex')
+                }
+            }
+        </script>
+        <!-- 内容 -->
+        <div class="detail-cont-out">
+        </div>
+        <!-- 详细内容 -->
+        <div class="goods">
+            <div class="goods-title">
+                <span class="goods-detail-img goods-title-active">图片详情</span>
+                <span class="goods-eva">评价（201）</span>
+                <span class="goods-packing">包装及参数</span>
+                <span class="goods-service">服务</span>
+            </div>
+            <!--  -->
+            <div class="good-imges-box">
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+        </div>
+        <!-- 尾巴 -->
+        <div class="tail">
+        </div>
+        <!-- 最底部 -->
+    </div>
+</body>
+
+</html>

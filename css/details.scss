@@ -1,0 +1,521 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../hisen_iconfont/iconfont.eot');
+    src: url('../hisen_iconfont/iconfont.eot?#iefix') format('embedded-opentype'), url('../hisen_iconfont/iconfont.woff2') format('woff2'), url('../hisen_iconfont/iconfont.woff') format('woff'), url('../hisen_iconfont/iconfont.ttf') format('truetype'), url('../hisen_iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#whole {
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7;
+    // 内容
+    .detail-cont-out {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 0;
+        background-color: #fff;
+        .detail-cont {
+            width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            height: auto;
+            background-color: #fff;
+            //    左边轮播图
+            .detail-le {
+                width: 550px;
+                height: 666px;
+                display: inline-block;
+                vertical-align: top;
+                background-color: #fff;
+                .swiper-slid {
+                    .swiper-slide {
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    .swiper-slide {
+                        margin-right: 0;
+                    }
+                }
+                .banner-top {
+                    width: 100%;
+                    height: 550px;
+                }
+                // 下边轮播图
+                .banner-out {
+                    width: 100%;
+                    margin: 10px 0;
+                    height: auto;
+                    position: relative;
+                    // 上下切换按钮
+                    .swiper-button-prev {
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 30px;
+                        outline: none;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        --swiper-navigation-color: #777;
+                        --swiper-navigation-size: 12px;
+                    }
+                    .swiper-button-next {
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 30px;
+                        outline: none;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        --swiper-navigation-color: #777;
+                        --swiper-navigation-size: 12px;
+                    }
+                }
+                .banner-thumbs {
+                    margin: 0 auto;
+                    width: 480px;
+                    height: 88px;
+                    box-sizing: border-box;
+                    .little-box {
+                        cursor: pointer;
+                        width: 88px;
+                        height: 88px;
+                        .little-boxs {
+                            width: 86px;
+                            height: 86px;
+                            border: 1px solid #ccc;
+                        }
+                        .little-boxs-active {
+                            border: 1px solid #00aaa6;
+                        }
+                    }
+                }
+            }
+            // 右边内容
+            .detail-ri {
+                display: inline-block;
+                width: 606px;
+                padding: 0 10px 20px 30px;
+                height: auto;
+                background-color: #fff;
+                .details-all {
+                    width: 100%;
+                    height: auto;
+                    // 分享
+                    .share-tilte {
+                        width: 100%;
+                        height: 20px;
+                        background-color: #fff;
+                        text-align: right;
+                        .share {
+                            width: 20px;
+                            height: 20px;
+                            display: inline-block;
+                            text-align: center;
+                            position: relative;
+                            .share-lian {
+                                cursor: pointer;
+                                width: 20px;
+                                display: inline-block;
+                                height: 20px;
+                                background: #fff;
+                            }
+                            // 分享弹框
+                            .share-box {
+                                position: absolute;
+                                right: 20px;
+                                bottom: -160px;
+                                display: flex;
+                                display: none;
+                                width: 350px;
+                                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                                background: #fff;
+                                height: 150px;
+                                flex-direction: row;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                .share-way1 {
+                                    display: flex;
+                                    background: #f7f7f7;
+                                    flex-direction: column;
+                                    margin: 0 0px;
+                                    i {
+                                        font-size: 60px;
+                                    }
+                                    &:nth-child(1) i {
+                                        color: #96CD10;
+                                    }
+                                    &:nth-child(2) i {
+                                        color: #F6452C;
+                                    }
+                                    &:nth-child(3) i {
+                                        color: #25678d;
+                                    }
+                                    &:nth-child(4) i {
+                                        color: #0BA2FB;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 渲染主体
+                    .detail-render {
+                        width: 100%;
+                        margin-top: 20px;
+                        background-color: #fff;
+                        // 商品标题
+                        .detail-render-title {
+                            color: #262626;
+                            font-size: 24px;
+                            padding: 0;
+                            line-height: 1.2;
+                            margin: 0 0 10px;
+                            font-weight: 400;
+                        }
+                        // 优惠内容
+                        .detail-render-box {
+                            width: 100%;
+                            height: auto;
+                            background-color: #fff;
+                            font-size: 14px;
+                            color: #646464;
+                            b {
+                                display: inline-block;
+                                font-weight: 600;
+                            }
+                            a {
+                                display: inline-block;
+                                color: #d9161c;
+                                text-decoration: underline;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    // 减价框
+                    .price-box {
+                        margin: 20px 0;
+                        font-size: 0;
+                        height: 60px;
+                        background: #f7f7f7;
+                        line-height: 60px;
+                        .price-all {
+                            display: inline-block;
+                            height: 100%;
+                            padding-left: 16px;
+                            width: auto;
+                            .price-new {
+                                display: inline-block;
+                                font-size: 36px;
+                                height: 100%;
+                                color: #d9161c;
+                                &::before {
+                                    content: '￥';
+                                    display: inline;
+                                    font-size: 18px;
+                                    color: #d9161c;
+                                }
+                            }
+                            .price-ri {
+                                margin-left: 5px;
+                                margin-top: 10px;
+                                display: inline-block;
+                                font-size: 14px;
+                                line-height: normal;
+                                vertical-align: top;
+                                .price-old {
+                                    display: block;
+                                    width: 80px;
+                                    height: 30%;
+                                    color: #646464;
+                                    text-decoration: line-through;
+                                }
+                                .sell-count {
+                                    display: block;
+                                    color: #646464;
+                                    width: 80px;
+                                    height: 30%;
+                                }
+                            }
+                        } // 减价通知
+                        .price-redu {
+                            float: right;
+                            height: 100%;
+                            font-size: 14px;
+                            width: 100px;
+                            color: #646464;
+                            i {
+                                font-size: 30px;
+                                color: #d9161c;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                    // 承诺
+                    .promise {
+                        width: 100%;
+                        height: 39px;
+                        font-size: 0;
+                        background: #fff;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid #f7f7f7;
+                        position: relative;
+                        .promise-title {
+                            display: inline-block;
+                            height: 100%;
+                            line-height: 40px;
+                            vertical-align: bottom;
+                            font-size: 14px;
+                            color: #777;
+                        }
+                        .promise-r {
+                            cursor: pointer;
+                            font-size: 14px;
+                            margin: 0 20px;
+                            display: inline-block;
+                            .promise-r-title {
+                                display: inline-block;
+                                margin-top: 15px;
+                                width: 420px;
+                                height: 25px;
+                                line-height: 25px;
+                                .promise-single {
+                                    display: inline-block;
+                                    width: 95px;
+                                    vertical-align: top;
+                                    font-size: 0;
+                                    height: 100%;
+                                    img {
+                                        display: inline-block;
+                                        width: 24px;
+                                    }
+                                    span {
+                                        vertical-align: top;
+                                        color: #464646;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            .promise-lit {
+                                display: inline-block;
+                                height: 40px;
+                                i {
+                                    transform: rotateZ( -90deg);
+                                    width: 18px;
+                                    color: #777;
+                                    line-height: 33px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        // 承诺详细盒子
+                        .promise-cont {
+                            cursor: default;
+                            display: none;
+                            z-index: 100;
+                            position: absolute;
+                            left: 0;
+                            top: 50px;
+                            background-color: #fff;
+                            overflow-y: scroll;
+                            width: 560px;
+                            height: 360px;
+                            padding: 10px;
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                            .promise-cont-title {
+                                font-size: 16px;
+                                color: #1e1e1e;
+                                font-weight: 400;
+                                margin: 12px 0 6px;
+                            }
+                            .promise-content {
+                                font-size: 14px;
+                                color: #646464;
+                                line-height: 1.8;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #ddd;
+                            }
+                        }
+                    }
+                    // 收货地址
+                    .details-area-all {
+                        margin: 0 0 20px 0;
+                        font-size: 0;
+                        height: 60px;
+                        position: relative;
+                        background: #f7f7f7;
+                        line-height: 60px;
+                        .details-area {
+                            .cart-song {
+                                .cart-cont-title {
+                                    width: 95%;
+                                    height: 34px;
+                                    line-height: 42px;
+                                    font-size: 0;
+                                    padding: 0 16px;
+                                    margin: 20px auto 15px;
+                                    background-color: #f7f7f7;
+                                    .title-le {
+                                        height: 100%;
+                                    }
+                                    .carry {
+                                        // 头地址
+                                        .carry-detail {
+                                            display: inline-block;
+                                            cursor: pointer;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            height: 100%;
+                                            span {
+                                                height: 100%;
+                                            }
+                                            .carry-change {
+                                                display: inline-block;
+                                                color: #00aaa6;
+                                                height: 100%;
+                                                font-weight: normal;
+                                            }
+                                        }
+                                        // 详细地址
+                                        .carry-arr {
+                                            top: 34px;
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .goods-now {
+                            position: absolute;
+                            display: inl=block;
+                            font-size: 14px;
+                            width: 32px;
+                            height: 20px;
+                            line-height: normal;
+                            left: 40px;
+                            top: 34px;
+                        }
+                    }
+                    // 添加购物车
+                    .buy {
+                        height: auto;
+                        background-color: #fff;
+                        .addcar-ti {
+                            width: 100%;
+                            height: 25px;
+                            font-size: 14px;
+                            color: #777;
+                        }
+                        // 选择数量
+                        .but-count {
+                            margin-top: 8px;
+                            margin-bottom: 40px;
+                            width: 130PX;
+                            font-size: 14px;
+                            height: 40px;
+                            line-height: 40px;
+                            color: #777;
+                            vertical-align: middle;
+                            background-color: #fff;
+                            display: inline-block;
+                            button {
+                                cursor: pointer;
+                                outline: none;
+                                vertical-align: top;
+                                width: 40px;
+                                height: 99%;
+                                border: 1px solid #eee;
+                                background-color: #fff;
+                            }
+                            .little-count {
+                                width: 50PX;
+                                margin: 0;
+                                padding: 0;
+                                text-align: center;
+                                border-top: 1px solid #eee;
+                                border-bottom: 1px solid #eee;
+                                outline: none;
+                                height: 39px;
+                                display: inline-block;
+                            }
+                        }
+                        // 添加购物车
+                        .car-add {
+                            width: 100%;
+                            font-size: 0;
+                            height: auto;
+                            .but-buy {
+                                cursor: pointer;
+                                height: 40px;
+                                vertical-align: top;
+                                width: 180px;
+                                margin-right: 5px;
+                                outline: none;
+                                background-color: #d9161c;
+                                display: inline-block;
+                                color: #fff;
+                                font-size: 16px;
+                            }
+                            .but-add {
+                                outline: none;
+                                cursor: pointer;
+                                width: 180px;
+                                height: 40px;
+                                background: #262626;
+                                display: inline-block;
+                                color: #fff;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 详细内容参数
+    .goods {
+        width: 1200px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding-bottom: 40px;
+        height: auto;
+        // 标题选项
+        .goods-title {
+            width: 100%;
+            line-height: 64px;
+            height: 64px;
+            font-size: 0;
+            span {
+                cursor: pointer;
+                width: 100px;
+                height: 100%;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                margin-right: 30px;
+                color: #777;
+            }
+            .goods-title-active {
+                color: #262626;
+            }
+        }
+        // 照片盒子
+        .good-imges-box {
+            border-top: 1px solid #ddd;
+            width: 790px;
+            margin: 0 205px;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

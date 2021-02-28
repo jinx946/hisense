@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城首页 仿</title>
+    <!-- 引入小图标库 -->
+    <link rel="stylesheet" href="./hisen_iconfont/iconfont.css">
+    <!-- 清除样式库 -->
+    <link rel="stylesheet" href="./common.css">
+    <!-- 头部统一样式库 -->
+    <link rel="stylesheet" href="./css/headNav.css">
+    <!-- swiper插件 -->
+    <link rel="stylesheet" href="./swiper-master/package/swiper-bundle.min.css">
+    <!-- 首页样式表 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> -->
+    <script src="./swiper-master/package/swiper-bundle.min.js"></script>
+    <!-- jq样式 -->
+    <script src="./jquery/jquery.min.js"></script>
+    <!-- ajax请求函数 -->
+    <script src="./js/ajax.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div id="whole" class="">
+        <!-- 侧边小标 -->
+        <ul class="side">
+        </ul>
+        <!-- 头部 -->
+        <!-- 头部图片 -->
+        <div class="top-img container">
+            <a href=""> <img src="./images/top.jpg" alt=""></a>
+        </div>
+        <!-- 头部导航栏 -->
+        <div class="topNav container">
+        </div>
+        <!-- 导航栏 -->
+        <div class="mainnav">
+        </div>
+        <script src="./js/indextop.js"></script>
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <!-- 每一个轮播图都必须有一个类名 swiper-slide  -->
+            <!-- 轮播图的容器 一定要有类名叫 ：swiper-wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block">
+                        <img src="https://img.shop.hisense.com/2021/01/13/0175ce06-364f-4f4d-9eb8-d83168e3541a.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2021/02/16/68cd350a-d8ab-486a-a9da-8fcce62d1ebd.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/09/27/8e01f52e-a265-4edf-b670-395e12a8c62b.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/08/21/1a0fe7be-b410-44a1-90b7-5940083ad4b1.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/04/16/761de7b3-b91d-455c-a8b0-2db15339fc4c.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/04/16/fe402c32-0416-491d-8a09-94e9bcebd98a.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/04/16/a4d2ab72-412d-4980-8efa-9aa6c17c2bb8.jpg" alt=""> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/04/16/70007e34-b080-4e7d-b763-885d9ef98098.jpg" alt=""> </a>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- 轮播js -->
+        <script>
+            // 初始化
+            var mySwiper = new Swiper('.swiper-container', {
+                // 默认显示索引为2的这个元素
+                // initialSlide: 1,
+                // grabCursor: true,
+                // init: false,
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                autoplay: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false
+                },
+                // autoplay: false,
+                // 分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                // 前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            // mySwiper.on('slideChange', function() {
+            //     console.log(this.activeIndex);
+            // })
+
+            // 上下切换按钮
+            var button_prev = $('.swiper-button-prev');
+            var button_next = $('.swiper-button-next');
+
+            // 鼠标移入轮播图
+            $('.swiper-container').on('mouseover', function(e) {
+                    button_prev.show();
+                    button_next.show();
+                })
+                // 鼠标移出
+            $('.swiper-container').on('mouseout', function(e) {
+                button_prev.hide();
+                button_next.hide();
+            })
+        </script>
+        <!-- 内容 -->
+        <!-- 整个 -->
+        <div class="main">
+            <div class="main-limi">
+                <h3 class="main-title">海信官网</h3>
+                <!-- 官网图片 -->
+                <div class="main-one">
+                    <div class="one-le">
+                        <a href="./html/list.html?search=telev" target="_block" class="one-hover">
+                            <img class="one-img" src="https://img.shop.hisense.com/2020/03/11/baeab71e-9c6a-4e5c-a9a6-433740527000.jpg" alt="">
+                            <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/98aa1b98-2964-4c80-8752-4a95457c4161.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="one-mid">
+                        <a href="./html/list.html?search=telev" target="_block" class="one-hover">
+                            <img class="one-img" src="https://img.shop.hisense.com/2021/01/13/766f2276-1d10-4999-9d58-a149f2f99385.jpg" alt=""> <img class="one-img-hover" src="https://img.shop.hisense.com/2021/01/13/e5ce0eaf-475c-4d38-a168-5a036ea16ef1.jpg"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="one-ri">
+                        <div class="one-ri-un">
+                            <a href="./html/list.html?search=telev" target="_block" class="one-hover">
+                                <img class="one-img" src="https://img.shop.hisense.com/2020/03/11/7de06ed3-4f9c-474a-bc0e-5c8a703a7348.jpg" alt=""> <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/cdef5f0c-7595-4ccc-a29c-a205bf24295d.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="one-ri-under">
+                            <a href="./html/list.html?search=telev" target="_block" class="one-hover">
+                                <img class="one-img" src="https://img.shop.hisense.com/2020/03/11/cf869511-93f1-4e73-b941-43c71464b84f.jpg" alt=""> <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/b0264cd8-269f-46a5-91e1-fe7c2273c688.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 家电区 -->
+                <h3 class="main-title">璀璨·成套家电专区</h3>
+                <div class="main-second-top">
+                    <img class="bag" src="https://img.shop.hisense.com/2020/11/16/14d015f6-daa2-47fc-9d72-db9e9dcb9412.jpg" alt="">
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/11/16/66d93732-79c9-43e8-8f2d-854c5421af1b.jpg" alt="">
+                        <img class="one-img-hover" src="https://img.shop.hisense.com/2020/11/16/21f22cfe-861b-45a3-8d0d-5daa52f0b87a.jpg" alt="">
+                    </a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/11/16/d4ccab22-43ac-4e93-b3a6-97756408ca76.jpg" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/11/16/e28621e1-01a1-4aac-90ca-673c7b91bc66.jpg" alt=""></a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/11/16/579fbcf3-fb20-43ef-ba7a-f1713bd06795.jpg" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/11/16/b6a41299-2a70-4ae5-a3a6-7fca4c1d501e.jpg" alt=""></a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/11/16/6a0395c4-c9e0-4bb4-b05b-ea3b24c63541.jpg" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/11/16/9fd3860f-0a08-4225-86f3-043720d5f3c8.jpg" alt=""></a>
+                    <img class="bag" src="https://img.shop.hisense.com/2020/11/16/14d015f6-daa2-47fc-9d72-db9e9dcb9412.jpg" alt="">
+                </div>
+                <div class="main-second-under">
+                    <a href="./html/list.html?search=telev" target="_block"><img src="https://img.shop.hisense.com/2020/11/16/1c2751d2-a65f-48ea-8802-a6a58642af49.jpg" alt=""></a>
+                </div>
+                <h3 class="main-title">品质精选</h3>
+                <!-- 品质精选 -->
+                <div class="chosen">
+                    <!-- 左 -->
+                    <div class="chosen-le">
+                        <!-- 作上 -->
+                        <a class="chosen-le-un" href="./html/list.html?search=telev" target="_block"><img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/b427cb31-d60a-4dac-bce4-f72ae1df366b.jpg" alt=""> <img class="chosen-img-pos " src="https://img.shop.hisense.com/2020/12/15/cb00bed0-7b67-4b16-a093-43074e5ecfd0.png"
+                                alt=""></a>
+                        <!-- 左下 -->
+                        <a class="chosen-le-under" href="./html/list.html?search=telev" target="_block"><img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/aea1fe5b-c07a-40af-b908-739a2c05ad7c.jpg" alt=""> <img class="chosen-img-pos" src="https://img.shop.hisense.com/2020/12/15/e5c02c6c-6c93-461e-be06-78cdfa192860.png"
+                                alt=""></a>
+                    </div>
+                    <!-- 右 -->
+                    <div class="chosen-ri">
+                        <a class="chosen-ri-un" href="./html/list.html?search=telev" target="_block"><img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/00f5994d-5313-46c5-a147-803b7065dba7.jpg" alt=""> <img class="chosen-img-pos" src="https://img.shop.hisense.com/2020/12/15/478f93bb-461e-41d7-b691-157a73610c62.png"
+                                alt=""></a>
+                        <a class="chosen-ri-under" href="./html/list.html?search=telev" target="_block"><img class="img-hover-big" src="https://img.shop.hisense.com/2021/01/06/ced1612a-1a2b-4de8-a3a1-e26286bd86c5.jpg" alt=""> <img class="chosen-img-pos" src="https://img.shop.hisense.com/2021/01/06/0ff634e7-24f4-416b-9f1d-aea609c0f1c3.png"
+                                alt=""></a>
+                    </div>
+                </div>
+                <h3 class="main-title ">电视专区
+                    <a class="more" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 电视专区 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=telev" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/656a6813-7aee-44ee-b777-7e4f689bfeb0.jpg" alt="">
+                                <img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/c40223ec-7bc5-4c61-b9f5-914e4d43a539.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=telev" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/09af4b3a-7b27-4e84-8f2d-6b8ac678ad3c.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/3d98e433-8cc9-4496-ac38-576cfebfceff.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=telev" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/bc734219-f117-4594-83b5-ecd7c14f4436.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/12baa4f2-c384-4c26-9e69-1f7579a734b4.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-telev'>
+                    </ul>
+                </div>
+                <h3 class="main-title">空调专区
+                    <a class="more" href="./html/list.html?search=air" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 空调 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/f0fcd1df-a3d2-4288-a28c-05b96c718805.jpg" alt="">
+                                <img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/15/047706cd-8c5a-44eb-8bc8-51e7e73c464d.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/895b87fe-f977-441f-a257-03b7fd0a2cc3.jpg" alt=""><img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/16/97191b85-202b-44b2-b16b-a2733bb68a35.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/46df7fca-393b-4ab0-9cb9-f5e7a26749f1.jpg" alt=""><img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/15/46c6c13b-3ac5-4a4e-b90f-3f7f5f583df7.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-air'>
+                    </ul>
+                </div>
+                <h3 class="main-title">冰箱专区
+                    <a class="more" href="./html/list.html?search=ice" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 冰箱 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/f2c98df7-68d5-49e3-87e9-28adc62c8d72.jpg" alt="">
+                                <img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/0aadafdd-1759-4c8f-9147-bb75a74a911e.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/13271748-dcd8-40ea-b50c-28d2497c78bb.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/c343523b-85a6-4631-bcc0-c24293443925.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/8bf574d2-0bb0-4fb2-aecb-3e3be5d10d42.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/4d9133bc-cc2b-459e-a2d4-d36ed807f83f.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-ice'></ul>
+                </div>
+                <h3 class="main-title">洗衣机专区
+                    <a class="more" href="./html/list.html?search=wash" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 洗衣机 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=wash" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/512f1ca8-999f-49c4-93c7-f171791c8856.jpg" alt="">
+                                <img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/e71d3dcb-64fc-44ed-9cbd-2687bf5401a6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=wash" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/62fc3d98-0ccf-4a67-9cf2-c2f47d752797.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/dcb4edd9-a51e-49c0-8f19-16000e6559c5.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=wash" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/00a45583-ec9e-4be7-b4d9-6168458a0caf.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/3c864378-5c40-414f-904f-f3e50662345a.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-wash'></ul>
+                </div>
+                <h3 class="main-title">科龙专区
+                    <a class="more" href="./html/list.html?search=air" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 科龙 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/f0fcd1df-a3d2-4288-a28c-05b96c718805.jpg" alt="">
+                                <img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/15/047706cd-8c5a-44eb-8bc8-51e7e73c464d.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/895b87fe-f977-441f-a257-03b7fd0a2cc3.jpg" alt=""><img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/16/97191b85-202b-44b2-b16b-a2733bb68a35.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=air" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/46df7fca-393b-4ab0-9cb9-f5e7a26749f1.jpg" alt=""><img class="img-pos2 " src="https://img.shop.hisense.com/2020/12/15/46c6c13b-3ac5-4a4e-b90f-3f7f5f583df7.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-air'></ul>
+                </div>
+
+                <h3 class="main-title">容声专区
+                    <a class="more" href="./html/list.html?search=ice" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 容声 -->
+                <div class="zone">
+                    <!-- 专区上 -->
+                    <div class="zone-un">
+                        <div class="zone-un-le">
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/f2c98df7-68d5-49e3-87e9-28adc62c8d72.jpg" alt="">
+                                <img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/0aadafdd-1759-4c8f-9147-bb75a74a911e.png" alt="">
+                            </a>
+                        </div>
+                        <div class="zone-un-ri">
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/13271748-dcd8-40ea-b50c-28d2497c78bb.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/c343523b-85a6-4631-bcc0-c24293443925.png"
+                                    alt="">
+                            </a>
+                            <a href="./html/list.html?search=ice" target="_block">
+                                <img class="img-hover-big" src="https://img.shop.hisense.com/2020/12/15/8bf574d2-0bb0-4fb2-aecb-3e3be5d10d42.jpg" alt=""><img class="img-pos " src="https://img.shop.hisense.com/2020/12/15/4d9133bc-cc2b-459e-a2d4-d36ed807f83f.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="zone-under" index='zone-ice'></ul>
+                </div>
+                <h3 class="main-title">选购攻略
+                    <a class="more" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 选购 -->
+                <div class="zone-info">
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2021/02/09/7a3b9940-3c80-41f7-89f5-7563a35b7978.jpg" alt="">
+                            <div>
+                                <h4>宅有趣｜享受居家式假日</h4>
+                                <p> 在家拥有美好假期，发现爱的新意</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2021/01/29/47f43bbe-402f-4571-8757-7a4639745040.jpg" alt="">
+                            <div>
+                                <h4> 温情攻略 ｜ 用TA悄悄说出你的新年心意 </h4>
+                                <p> 用另一种方式传达爱与关心</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2021/01/08/d82f398d-77d5-4833-9db1-6b37ad817086.jpg" alt="">
+                            <div>
+                                <h4>从『新』开始，为生活写下志愿</h4>
+                                <p> 2021向美好生活出发</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <h3 class="main-title">官方资讯
+                    <a class="more" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/04/17/8910f2a7-8d7b-4757-a4b2-e0db48714285.png" alt=""><img class="one-img-hover" src="https://img.shop.hisense.com/2020/04/17/738ea3ee-6602-4688-873c-0e8df2fcb2f0.png" alt=""></a>
+                </h3>
+                <!-- 官方资讯 -->
+                <div class="zone-info">
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2021/02/09/ac0c1b6f-6f31-4f2c-8b51-d8da2c2785c6.jpg" alt="">
+                            <div>
+                                <h4>海信激光电视携手《2021新春相声大会》 伴您开心过大年</h4>
+                                <p>
+                                    2月7日，中央广播电视总台文艺节目中心宣布，《2021新春相声会》由海信激光电视独家冠名。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2020/09/27/ac976131-ea68-4608-b666-75ddf3536893.png" alt="">
+                            <div>
+                                <h4>巩俐担任海信全球品牌代言人 </h4>
+                                <p>“选择巩俐最看重的是她的极致精神，与海信诉求的信赖和专注不谋而合，此外重点兼顾欧洲杯和海外市场的营销。”</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="zone-info-box">
+                        <a href="./html/list.html?search=telev" target="_block">
+                            <img src="https://img.shop.hisense.com/2021/01/15/3138f1ff-2451-44b7-adb2-5383b4644953.png" alt="">
+                            <div>
+                                <h4>从影院到客厅，听陈建斌、高群书讲述新的观影、新的创作</h4>
+                                <p>海信电视2021年首期“ULED影像大师课”近日正式开讲，陈建斌、高群书、刘浩良等著名导演、演员受邀担任主讲嘉宾，现场解读他们最爱的经典影视作品和观影方式
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="main-title">视频</h3>
+                <!-- 视频 -->
+                <div class="zone-video">
+                    <div class="zone-video-box" title="视频过大，缓存需要时间">
+                        <video src="https://img.shop.hisense.com/2020/09/15/99a02259-e1d8-4d05-937e-10ccba9575b0.mp4" controls="controls">
+                             <source src="https://img.shop.hisense.com/2020/09/15/99a02259-e1d8-4d05-937e-10ccba9575b0.mp4" type="video/mp4">    
+                            </video>
+                        <div>
+                            <h4>海信8K双屏电视</h4>
+                            <p>突破行业瓶颈，见证世界海信</p>
+                        </div>
+                    </div>
+                    <div class="zone-video-box">
+                        <video src="https://img.shop.hisense.com/2020/11/25/908d2802-4755-482b-b4c4-a87504e625aa.mp4" controls="controls">
+                             <source src="https://img.shop.hisense.com/2020/11/25/908d2802-4755-482b-b4c4-a87504e625aa.mp4" type="video/mp4" >    
+                            </video>
+                        <div>
+                            <h4>海信璀璨系列</h4>
+                            <p>成套家电之美 彰显耀世尊贵</p>
+                        </div>
+
+                    </div>
+                    <div class="zone-video-box">
+                        <video src="https://hisense-img.oss-cn-qingdao.aliyuncs.com/2018/10/07/52f7d4c2-1f4d-43cc-899b-e49d3c636039.mp4" controls="controls">
+                             <source src="https://hisense-img.oss-cn-qingdao.aliyuncs.com/2018/10/07/52f7d4c2-1f4d-43cc-899b-e49d3c636039.mp4" type="video/mp4">    
+                            </video>
+                        <div>
+                            <h4>WE BELIEVE IN HISENSE</h4>
+                            <p>全球海信人共唱一首歌</p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <h3 class="main-title">服务</h3>
+                <!-- 服务 -->
+                <div class="zone-service">
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/03/11/2e9bf767-2c6c-44ac-bec2-5eff4bdbef7e.png" alt="">
+                        <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/4926f48b-7441-4486-9efa-c37efe051dac.png" alt=""></a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/03/11/57e147bd-b3a1-4418-a02f-03f13b0b4774.png" alt="">
+                        <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/717179f3-c75d-41c1-a125-6e605fcd228e.png" alt=""></a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/03/11/3809f58b-c6ba-4697-8880-ba2a2ae660d9.png" alt="">
+                        <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/e6d11548-5a81-4799-b60b-9fad44843df1.png" alt=""></a>
+                    <a class="one-hover" href="./html/list.html?search=telev" target="_block"><img class="one-img" src="https://img.shop.hisense.com/2020/03/11/ae703862-5193-405e-a0f1-98febc8ee416.png" alt="">
+                        <img class="one-img-hover" src="https://img.shop.hisense.com/2020/03/11/26a22da8-f9c3-4f0c-b7d1-4573abe468fd.png" alt=""></a>
+
+                </div>
+            </div>
+        </div>
+        <!-- 大图 -->
+        <div class="pic">
+            <img src="https://img.shop.hisense.com/2020/04/16/75b6fa8d-5ee4-4c27-9823-3eca28272a48.jpg" alt="">
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footer-un">
+                <div class="footer-un-limi">
+                    <div class="footer-un-box">
+                        <img src="https://img.shop.hisense.com/2020/03/11/aa77b712-aa12-4822-ad14-97a8aa20a381.png" alt="">
+                    </div>
+                    <div class="footer-un-box">
+                        <img src="https://img.shop.hisense.com/2020/03/11/cbdd09c3-0f13-49ed-a6a3-75e0008e997d.png" alt="">
+                    </div>
+                    <div class="footer-un-box">
+                        <img src="https://img.shop.hisense.com/2020/03/11/2d850478-5a51-4724-a54f-d64ddff0a1cc.png" alt="">
+                    </div>
+                    <div class="footer-un-box">
+                        <img src="https://img.shop.hisense.com/2020/03/11/21f0013e-2220-45fb-9dc7-b9eae8936ffd.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 尾巴 -->
+        <div class="tail">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

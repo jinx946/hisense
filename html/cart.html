@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城购物车</title>
+    <link rel="stylesheet" href="../hisen_iconfont/iconfont.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../css/headNav.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/cart.js"></script>
+</head>
+
+<body>
+    <div id="whole">
+        <!-- 侧边小标 -->
+        <ul class="side">
+        </ul>
+        <!-- 头部 -->
+        <!-- 头部图片 -->
+        <!-- 头部导航栏 -->
+        <div class="topNav">
+        </div>
+        <!-- 导航栏 -->
+        <div class="mainnav1">
+            <div class="mainnav-mid">
+                <div class="logol">
+                    <a href="../index.html" target="_self"><img src="..//images/login.png" alt=""></a>
+                </div>
+                <span class="mycar">我的购物车</span>
+            </div>
+        </div>
+        <script src="../js/headNav.js"></script>
+        <script>
+            //滚动条滚动事件
+            window.onscroll = function() {
+                // 滚动到一定高度，导航栏置顶
+                if (scrollY < 500) {
+                    $('.side').css({
+                        bottom: 0,
+                        right: 10
+                    });
+
+                } else {
+                    $('.side').css({
+                        bottom: 200,
+                        right: 10,
+                    });
+
+                }
+                if (scrollY < 1000) {
+                    $('.goTop').hide();
+                } else {
+                    $('.goTop').show();
+                    $('.goTop').css('display', 'flex')
+                }
+            }
+        </script>
+
+        <!-- 配送 -->
+        <div class="cart-song">
+            <div class="cart-cont-title">
+                <div class="title-le">配送至</div>
+                <div class="carry">
+                    <div class="carry-detail">
+                        <span class="carry1">广州市</span><span class="carry2">天河区</span><span class="carry3">元岗路</span> <i class="iconfont icon-icon-test6"></i>
+                    </div>
+                    <div class="carry-arr">
+                        <ul class="carry-arr-title">
+                            <li class="fenji1"><a href="">湖北加快两地分居拉克的 </a><i class="iconfont icon-icon-test6"></i></li>
+                            <li class="fenji2 carry-active"><a href=""> 请选择</a> <i class="iconfont icon-icon-test6"></i></li>
+                            <li class="fenji3"><a href="">空白 </a><i class="iconfont icon-icon-test6"></i></li>
+                        </ul>
+                        <ul class="little">
+                            <li class="little-so"><a href="">北京 </a></li>
+                            <li class="little-so"><a href="">天津 </a></li>
+                            <li class="little-so"><a href="">广东 </a></li>
+                            <li class="little-so"><a href="">上海 </a></li>
+                            <li class="little-so"><a href="">湖北加快两地分居拉克的 </a></li>
+                            <li class="little-so"><a href="">和别 </a></li>
+                            <li class="little-so"><a href="">湖南 </a></li>
+                            <li class="little-so"><a href="">北京 </a></li>
+                            <li class="little-so"><a href="">天津 </a></li>
+                            <li class="little-so"><a href="">广东 </a></li>
+                            <li class="little-so"><a href="">上海 </a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品面板 -->
+        <div class="panel">
+            <!-- 面板标题 -->
+            <div class="panel-title panel-title-un">
+                <input class="selAll" type="checkbox">
+                <div class="panel-title-le"><span>全选</span><span>商品信息</span></div>
+                <ul class="panel-title-ri">
+                    <li><span>价格（元）</span></li>
+                    <li> <span>数量</span></li>
+                    <li><span>小计（元）</span></li>
+                    <li> <span>操作</span></li>
+                </ul>
+            </div>
+            <!-- 面板内容 -->
+            <div class="panel-cont-all">
+                <!-- 单个商品 -->
+            </div>
+            <!-- 下方全选 -->
+            <div class="panel-title panel-title-under">
+                <input class="selAll" type="checkbox" name="" id="">
+                <div class="panel-title-le"><span>全选</span><a href="javascript:void(0);" class="delse">删除选中商品</a></div>
+                <div class="panel-set">
+                    <span>已选<i>0</i>种商品</span>
+                    <span>合计（不包含运费）：<em>￥0</em></span>
+                    <span class="set-all set-active">去结算</span>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+        </div>
+        <!-- 尾巴 -->
+        <div class="tail">
+        </div>
+        <!-- 最底部 -->
+    </div>
+</body>
+
+</html>

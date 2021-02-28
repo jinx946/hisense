@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* 清除样式 */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+span,
+p,
+img,
+form,
+input,
+label,
+select,
+option,
+textarea,
+button,
+table,
+tr,
+td,
+i,
+b,
+em,
+strong,
+u,
+br,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+figure,
+figcaption,
+hgroup,
+button,
+input mark {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* 继承可视窗口高度 */
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* 去除列表默认列表项 */
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+/* 去除超链接默认样式 */
+
+a {
+    color: #222222;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* 解决图片存在bug */
+
+img {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* 万能清除法 */
+
+.clear_fix::after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+
+/* 去除文字默认样式 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+i,
+em {
+    font-style: normal;
+}
